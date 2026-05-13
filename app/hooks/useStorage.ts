@@ -13,10 +13,10 @@ const SEED_BOOKS: Book[] = [
 ];
 
 const SEED_MEMBERS: Member[] = [
-  { id: 'm1', nama: 'Budi Santoso', nis: '2024001', kelas: 'XII IPA 1', email: 'budi@sekolah.ac.id', telepon: '081234567890', tanggalDaftar: '2024-01-15', aktif: true },
-  { id: 'm2', nama: 'Siti Rahayu', nis: '2024002', kelas: 'XI IPS 2', email: 'siti@sekolah.ac.id', telepon: '081234567891', tanggalDaftar: '2024-01-16', aktif: true },
-  { id: 'm3', nama: 'Ahmad Fauzi', nis: '2024003', kelas: 'X MIPA 3', email: 'ahmad@sekolah.ac.id', telepon: '081234567892', tanggalDaftar: '2024-02-01', aktif: true },
-  { id: 'm4', nama: 'Dewi Putri', nis: '2024004', kelas: 'XII IPS 1', email: 'dewi@sekolah.ac.id', telepon: '081234567893', tanggalDaftar: '2024-02-05', aktif: false },
+  { id: 'm1', nama: 'Budi Santoso', nis: '2024001', kelas: 'XII IPA 1', email: 'budi@sekolah.ac.id', telepon: '081234567890', tanggalDaftar: '2024-01-15', aktif: true, alamat: 'Sulfat' },
+  { id: 'm2', nama: 'Siti Rahayu', nis: '2024002', kelas: 'XI IPS 2', email: 'siti@sekolah.ac.id', telepon: '081234567891', tanggalDaftar: '2024-01-16', aktif: true, alamat: 'Pakis' },
+  { id: 'm3', nama: 'Ahmad Fauzi', nis: '2024003', kelas: 'X MIPA 3', email: 'ahmad@sekolah.ac.id', telepon: '081234567892', tanggalDaftar: '2024-02-01', aktif: true, alamat: 'Singosari' },
+  { id: 'm4', nama: 'Dewi Putri', nis: '2024004', kelas: 'XII IPS 1', email: 'dewi@sekolah.ac.id', telepon: '081234567893', tanggalDaftar: '2024-02-05', aktif: false, alamat: 'Lang Lang' },
 ];
 
 const SEED_PEMINJAMAN: Peminjaman[] = [

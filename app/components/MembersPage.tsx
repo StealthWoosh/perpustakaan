@@ -12,7 +12,7 @@ interface MembersPageProps {
 }
 
 const emptyForm = {
-  nama: '', nis: '', kelas: '', email: '', telepon: '',
+  nama: '', nis: '', kelas: '', email: '', telepon: '', alamat: '',
   tanggalDaftar: new Date().toISOString().split('T')[0], aktif: true
 };
 
@@ -44,7 +44,7 @@ export default function MembersPage({ members, onAdd, onUpdate, onDelete }: Memb
   };
 
   const openEdit = (m: Member) => {
-    setForm({ nama: m.nama, nis: m.nis, kelas: m.kelas, email: m.email, telepon: m.telepon, tanggalDaftar: m.tanggalDaftar, aktif: m.aktif });
+    setForm({ nama: m.nama, nis: m.nis, kelas: m.kelas, email: m.email, telepon: m.telepon, tanggalDaftar: m.tanggalDaftar, aktif: m.aktif, alamat: m.alamat, });
     setEditTarget(m);
     setModalOpen(true);
   };
@@ -100,6 +100,7 @@ export default function MembersPage({ members, onAdd, onUpdate, onDelete }: Memb
                 <th>Kontak</th>
                 <th>Tgl Daftar</th>
                 <th>Status</th>
+                <th>Alamat</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -132,6 +133,11 @@ export default function MembersPage({ members, onAdd, onUpdate, onDelete }: Memb
                     <span className={`badge ${m.aktif ? 'badge-green' : 'badge-gray'}`}>
                       {m.aktif ? 'Aktif' : 'Non-Aktif'}
                     </span>
+                  </td>
+                  <td>
+                    <div style={{ fontSize: '12px', color: 'var(--ink-muted)' }}>
+                      <div>{m.alamat}</div>
+                    </div>
                   </td>
                   <td>
                     <div className="actions">
@@ -192,6 +198,10 @@ export default function MembersPage({ members, onAdd, onUpdate, onDelete }: Memb
                     <option value="aktif">Aktif</option>
                     <option value="nonaktif">Non-Aktif</option>
                   </select>
+                </div>
+                <div className="form-group">
+                  <label>Alamat</label>
+                  <input value={form.alamat} onChange={e => setForm({ ...form, alamat: e.target.value })} placeholder="Alamat" />
                 </div>
               </div>
             </div>

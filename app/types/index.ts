@@ -13,6 +13,7 @@ export interface Book {
 }
 
 export interface Member {
+  alamat: string;
   id: string;
   nama: string;
   nis: string;
